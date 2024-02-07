@@ -1,7 +1,9 @@
+import Sidebar from "./Components/Sidebar";
 
 export default function Router() {
   return (
-    <div className="text-xl">
+    <div className="">
+        <Sidebar/>
     </div>
   )
 }

@@ -1,7 +1,9 @@
 
 function Sidebar() {
   return (
-    <div className="bg-red">Sidebar</div>
+    <div className="lg">
+        he
+    </div>
   )
 }
 
