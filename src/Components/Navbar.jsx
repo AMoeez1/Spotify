@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom"
+import { IoIosNotifications, IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
+import { FaUser } from "react-icons/fa";
+
 
 function Header() {
   return (
-    <div>
-      <header className="bg-white fixed top-0 w-full">
+    <div className="bg-white">
+      <header className="fixed py-5 top-0 w-full">
         <nav className="container px-6 py-3">
-            <div className="flex justify-between items-center">
-                <a href="#" className="text-2xl font-bold text-gray-800">MyWebsite</a>
-                <div className="hidden md:flex items-center space-x-1">
-                  {/* <Link>Ma</Link> */}
-                    <a href="#" className="bg-gray-900 hover:px-5 hover:py-2.5 text-white px-4 py-2 rounded-full">Explore Premium</a>
-                    <a href="#" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-2 rounded-full">Install App</a>
-                    <a href="#" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-2 rounded-full">Notification</a>
-                    <a href="#" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-2 py-4 rounded-full">Profile</a>
+            <div className="flex items-center">
+                <IoIosArrowForward />
+                <IoIosArrowBack />
+                <div className="hidden ml-auto md:flex items-center space-x-1">
+                    <Link to="" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-1 rounded-full">Explore Premium</Link>
+                    <Link to="#" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-1 rounded-full">Install App</Link>
+                    <Link to="#" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-2 rounded-full"><IoIosNotifications/></Link>
+                    <Link to="#" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-2 rounded-full"><FaUser/></Link>
                 </div>
                 <div className="md:hidden flex items-center">
                     <button className="text-gray-800 focus:outline-none">

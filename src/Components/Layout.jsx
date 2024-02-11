@@ -1,10 +1,11 @@
+import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 
 function Layout({ children }) {
   return (
-    <div>
-        {/* Navbar */}
-        <Sidebar/>
+    <div className="">
+      <Navbar/>
+      <Sidebar/>
         {/* Children */}
         {children}
         {/* Footer */}
