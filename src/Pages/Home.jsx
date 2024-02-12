@@ -4,7 +4,7 @@ import TopPlaylist from '../Components/TopPlaylist'
 function Home() {
   return (
     <Layout>
-        <TopPlaylist/>
+        {/* <TopPlaylist/> */}
     </Layout>
   )
 }

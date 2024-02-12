@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar"
 function Layout({ children }) {
   return (
     <div className="">
-      <Navbar/>
+      {/* <Navbar/> */}
       <Sidebar/>
         {/* Children */}
         {children}

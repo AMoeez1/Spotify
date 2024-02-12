@@ -9,8 +9,11 @@ function Header() {
       <header className="fixed py-5 top-0 w-full">
         <nav className="container px-6 py-3">
             <div className="flex items-center">
-                <IoIosArrowForward />
-                <IoIosArrowBack />
+                <div className="mx-auto flex">
+                <IoIosArrowForward size={25}/>
+                <IoIosArrowBack size={25} />
+
+                </div>
                 <div className="hidden ml-auto md:flex items-center space-x-1">
                     <Link to="" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-1 rounded-full">Explore Premium</Link>
                     <Link to="#" className="bg-gray-900 hover:text-gray-300 hover:bg-gray-950 text-white px-4 py-1 rounded-full">Install App</Link>
