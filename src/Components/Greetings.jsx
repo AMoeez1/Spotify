@@ -16,7 +16,11 @@ function Greetings() {
   }
 
   return (
-    <h1 className="mt-16 font-bold text-start text-3xl text-gray"> Good {timeOfDay}!</h1>
+    <div className="">
+      <h1 className="mt-16 text-center font-bold text-3xl text-gray"> Good {timeOfDay}!</h1>
+
+    </div>
+  
   )
 }
 

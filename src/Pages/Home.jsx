@@ -1,10 +1,12 @@
+import Greetings from '../Components/Greetings'
 import Layout from '../Components/Layout'
 import TopPlaylist from '../Components/TopPlaylist'
 
 function Home() {
   return (
     <Layout>
-        {/* <TopPlaylist/> */}
+      {/* <Greetings/>
+        <TopPlaylist/> */}
     </Layout>
   )
 }
