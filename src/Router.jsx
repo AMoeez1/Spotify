@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes , Route } from "react-router-dom";
 import Home from "./Pages/Home";
+import PlaylistFull from "./Pages/PlaylistFull";
+import Error from "./Pages/Error";
 
 export default function Router() {
   return (
@@ -7,6 +9,8 @@ export default function Router() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>}></Route>
+            <Route path="/*" element={<Error/>}></Route>
+            <Route path="/playlist/:playlistId" element={<PlaylistFull/>}></Route>
           </Routes>
         </BrowserRouter>
     </div>

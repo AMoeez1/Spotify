@@ -1,8 +1,8 @@
-
 function Greetings() {
   let timeOfDay;
   const date = new Date();
   const hours = date.getHours();
+
 
   if (hours < 12) {
     timeOfDay = 'morning';
@@ -15,13 +15,7 @@ function Greetings() {
     // styles.color = "#04756F";
   }
 
-  return (
-    <div className="">
-      <h1 className="mt-16 text-center font-bold text-3xl text-gray"> Good {timeOfDay}!</h1>
-
-    </div>
-  
-  )
+  return <h1 className="mt-5 font-bold text-3xl text-white"> Good {timeOfDay}!</h1>
 }
 
 export default Greetings

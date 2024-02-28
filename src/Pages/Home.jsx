@@ -1,12 +1,14 @@
-import Greetings from '../Components/Greetings'
+// import Greetings from '../Components/Greetings'
 import Layout from '../Components/Layout'
-import TopPlaylist from '../Components/TopPlaylist'
+import TopPlaylist from '../Components/API Data/TopListened'
+import Playlists from '../Components/API Data/Playlists'
 
 function Home() {
   return (
     <Layout>
-      {/* <Greetings/>
-        <TopPlaylist/> */}
+      {/* <Greetings/> */}
+        <TopPlaylist/>
+        <Playlists/>
     </Layout>
   )
 }

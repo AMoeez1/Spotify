@@ -1,10 +1,8 @@
+import { useEffect, useRef, useState } from "react";
 import { FaArrowRight, FaBars, FaBookOpen, FaPlus } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import { TfiSearch } from "react-icons/tfi";
 import { Link } from "react-router-dom";
-import Navbar from './Navbar'
-import { useEffect, useRef, useState } from "react";
-
 export default function Sidebar() {
   const Data = [
     {
@@ -17,7 +15,7 @@ export default function Sidebar() {
     },
   ];
 
-  const [width, setWidth] = useState(350);
+  const [width, setWidth] = useState(340);
   const isResized = useRef(false);
 
   useEffect(() => {
@@ -36,7 +34,7 @@ export default function Sidebar() {
   return (
     <>
     <div className="flex">
-      <div className="min-w-[280px] max-w-[50rem] p-3" style={{ width: `${width / 16}rem`}}>
+      <div className="min-w-[300px] max-w-[50rem] p-3" style={{ width: `${width / 16}rem`}}>
           <div className="bg-[#121212] text-gray-50 py-3 px-5 rounded-md ">
             {Data.map((items, index) => {
                 return (
