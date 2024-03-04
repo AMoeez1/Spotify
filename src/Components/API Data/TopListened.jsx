@@ -5,7 +5,7 @@ import Greetings from "../Greetings";
 
 function TopPlaylist() {
   return (
-    <div>
+    <div className="pt-12">
       {/* <TopSongApi/> */}
       <Greetings/>
     <div className="flex">

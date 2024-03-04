@@ -89,7 +89,7 @@ function Header() {
     </PageHeader>
   </div> */}
       <header>
-        <nav className=" px-4 lg:px-6 py-2.5 text-white">
+        <nav className=" px-4 lg:px-6 py-2.5 text-white fixed">
           <div className="flex flex-wrap items-center
            max-w-screen-xl">
             <div className="gap-x-3 flex">
@@ -101,7 +101,7 @@ function Header() {
             </Link>
 
             </div>
-            <div className="ml-auto">
+            <div className="relative left-[40rem]">
               <ul className="flex gap-3 flex-col mt-4 font-medium lg:flex-row">
                 <Link
                   to=""
