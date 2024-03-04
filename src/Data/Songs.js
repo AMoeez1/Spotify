@@ -40,18 +40,18 @@ const Song = [
       },
       {
         id:uuidv4() ,
-        title: 'Dance Monkey',
-        artist: 'Tones and I',
-        album: 'The Kids Are Coming',
+        title: 'Studio gangster',
+        artist: 'Talha Anjum',
+        album: 'Open Letter',
         duration: '3:30',
-        cover: 'url_to_dance_monkey_cover_image',
-        url: 'url_to_dance_monkey_song'
+        cover: '',
+        url: ''
       },
       {
         id:uuidv4() ,
-        title: 'Uptown Funk',
-        artist: 'Mark Ronson ft. Bruno Mars',
-        album: 'Uptown Special',
+        title: 'Intro',
+        artist: 'Savage',
+        album: 'November',
         duration: '4:30',
         cover: 'url_to_uptown_funk_cover_image',
         url: 'url_to_uptown_funk_song'
