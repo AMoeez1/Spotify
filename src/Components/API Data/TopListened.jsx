@@ -1,6 +1,6 @@
 
 import TopSongs from '../../Data/Songs'
-import doorie from '../../assets/doorie.jfif'
+import doorie from '../../assets/Playlist/doorie.jfif'
 import Greetings from "../Greetings";
 
 function TopPlaylist() {

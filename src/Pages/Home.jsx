@@ -6,9 +6,12 @@ import Playlists from '../Components/API Data/Playlists'
 function Home() {
   return (
     <Layout>
+      <div className="h-screen overflow-hidden hover:overflow-y-scroll">
       {/* <Greetings/> */}
         <TopPlaylist/>
         <Playlists/>
+
+      </div>
     </Layout>
   )
 }
