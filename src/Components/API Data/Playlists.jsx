@@ -35,7 +35,7 @@ export default function Playlists() {
       </div>
       <div className="grid grid-cols-10 @container">
         {Data.map((item, index) => {
-          if (index <= 5) {
+          // if (index <= 5) {
             return (
               <Link
                 key={index}
@@ -58,8 +58,8 @@ export default function Playlists() {
                 <p className="text-sm text-[#a7a7a7]">{item.artist}</p>
               </Link>
             );
-          }
-          return null;
+          // }
+          // return null;s
         })}
       </div>
     </div>
