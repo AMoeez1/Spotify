@@ -21,6 +21,7 @@ const PlaylistData = [
   //     artist: [
   //         'Juice Wrld, ', 'Nippsey Hustle, ', '2pac, ', '& more'
   //     ]
+  
   // },
   // {
   //     id: '1a66e4a0-87a1-4644-a9af-a4a09ad66fb5',

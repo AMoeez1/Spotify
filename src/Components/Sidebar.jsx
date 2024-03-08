@@ -10,6 +10,7 @@ import { GoDotFill, GoHomeFill, GoPin } from "react-icons/go";
 import { TfiSearch } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import songsData from "../Data/PlaylistData";
+import '../CSS/Scrollbar.css'
 export default function Sidebar() {
   const Data = [
     {
