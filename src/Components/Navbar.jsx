@@ -10,10 +10,10 @@ function Header() {
   return (
     <div className="">
       <header>
-        <nav className="w-screen overflow-x-hidden text-white fixed">
+        <nav className="w-screen overflow-x-hidden text-white fixed z-10">
           <div className="flex flex-wrap items-center
            max-w-screen-xl">
-            <div className="gap-x-3 flex">
+            <div className="gap-x-3 flex px-6 ">
             <Link className="flex items-center justify-center border text-gray-300 border-transparent rounded-full p-1.5 bg-[#191919]">
               <IoIosArrowForward size={25} />
             </Link>
@@ -22,7 +22,7 @@ function Header() {
             </Link>
 
             </div>
-            <div className="relative left-[25rem]">
+            <div className="relative left-[35rem]">
               <ul className="flex gap-3 flex-col mt-4 font-medium lg:flex-row">
                 <Link
                   to=""
