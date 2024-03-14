@@ -4,23 +4,8 @@ import { FaPlay } from "react-icons/fa";
 import { useState } from "react";
 
 export default function Playlists() {
-  //   const [play, setPlay] = useState(false);
-  //   const filterID = Data.filter((prod) => prod.id);
-
-  //   const mouseEnter = event => {
-  //     setPlay(current => !current);
-  //   };
-  //   const mouseLeave = event => {
-  //     setPlay(current => !current)
-  //     };
   const name = "Abdul Moeez";
   const [play, setPlay] = useState(false);
-  // const [hoveredCard, setHoveredCard] = useState(false);
-
-  // const handleCardHover = (isHovered) => {
-  //   setHoveredCard(isHovered);
-  //   setPlay(isHovered);
-  // };
 
   return (
     <div className="text-white mt-10">
@@ -33,18 +18,20 @@ export default function Playlists() {
           Show All
         </Link>
       </div>
-      <div className="grid grid-cols-10 @container">
-        {Data.map((item, index) => {
-          if (index <= 5) {
+      <div className="grid grid-cols-12 @container">
+        {Data.map((item) => {
+          // if (index <= 5) {
             return (
+              item.albums.map((albums, index) =>{
+                return(
               <Link
                 key={index}
-                className="mt-2 col-span-2 bg-[#141414] hover:bg-[#272727] w-56 h-68 p-4 rounded-xl transition-all group"
-                to={`/playlist/${item.id}`}
+                className="mt-2 col-span-3 hover:bg-[#272727] w-56 h-68 p-4 rounded-xl transition-all group"
+                to={`/playlist/${albums.albumID}`}
               >
-                <img src={item.cover} className="h-42 w-42 rounded-xl" alt="" />
+                <img src={albums.cover} className="h-42 w-42 rounded-xl" alt="" />
                 <div className="flex mt-2">
-                  <p className="text-lg my-3">{item.title}</p>
+                  <p className="text-lg my-3">{albums.title}</p>
                   <div
                     className={`ml-auto my-auto text-xl bg-green-600 text-black rounded-full ${
                       play ? "animate-play-button" : ""
@@ -55,11 +42,14 @@ export default function Playlists() {
                     </button>
                   </div>
                 </div>
-                <p className="text-sm text-[#a7a7a7]">{item.artist}</p>
+              <Link to={`/artist/${item.artistId}`} className="text-sm text-[#a7a7a7]">{item.artist}</Link>
               </Link>
+
+                )
+              })
             );
-          }
-          return null;
+          // }
+          // return null;s
         })}
       </div>
     </div>
