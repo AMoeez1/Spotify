@@ -18,7 +18,7 @@ export default function Playlists() {
           Show All
         </Link>
       </div>
-      <div className="grid grid-cols-10 @container">
+      <div className="grid grid-cols-12 @container">
         {Data.map((item) => {
           // if (index <= 5) {
             return (
@@ -26,8 +26,8 @@ export default function Playlists() {
                 return(
               <Link
                 key={index}
-                className="mt-2 col-span-2 hover:bg-[#272727] w-56 h-68 p-4 rounded-xl transition-all group"
-                // to={`/playlist/${albums.albumID}`}
+                className="mt-2 col-span-3 hover:bg-[#272727] w-56 h-68 p-4 rounded-xl transition-all group"
+                to={`/playlist/${albums.albumID}`}
               >
                 <img src={albums.cover} className="h-42 w-42 rounded-xl" alt="" />
                 <div className="flex mt-2">

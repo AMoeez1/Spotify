@@ -10,7 +10,6 @@ import { GoDotFill, GoHomeFill, GoPin } from "react-icons/go";
 import { TfiSearch } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import songsData from "../Data/PlaylistData";
-import '../CSS/Scrollbar.css'
 export default function Sidebar() {
   const Data = [
     {
@@ -81,15 +80,18 @@ export default function Sidebar() {
                 Albums
               </button>
             </div>
-              <div className="flex items-center my-5 text-[#828282]">
-                <TfiSearch size={20} className="cursor-pointer" />
-                <div className="flex cursor-pointer items-center gap-x-2 ml-auto ">
-                  <span className=""> Recent</span>
-                  <FaBars size={20} />
-                </div>
+            <div className="flex items-center my-5 text-[#828282]">
+              <TfiSearch size={20} className="cursor-pointer" />
+              <div className="flex cursor-pointer items-center gap-x-2 ml-auto ">
+                <span className=""> Recent</span>
+                <FaBars size={20} />
               </div>
+            </div>
             <div className="overflow-y-hidden h-[27rem]  hover:overflow-y-scroll ">
-              <Link to='/collection/tracks' className="flex mt-2 hover:bg-[#272727] rounded-lg  ">
+              <Link
+                to="/collection/tracks"
+                className="flex mt-2 hover:bg-[#272727] rounded-lg  "
+              >
                 <div className="m-2 w-14 h-14 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 via-blue-400 to-sky-700">
                   <i>
                     <FaHeart />
@@ -109,37 +111,31 @@ export default function Sidebar() {
                   </div>
                 </div>
               </Link>
-            {/* Dynamic Playlists  */}
-            {songsData.map((songs) => {
-              return (
-                songs.albums.map((albums) =>{
+              {/* Dynamic Playlists  */}
+              {songsData.map((songs) => {
+                return songs.albums.map((albums) => {
                   return (
-                <Link key={albums.id} to={`/playlist/${albums.albumID}`}>
-                <div
-                  className="flex mt-2 hover:bg-[#272727] rounded-lg  "
-                >
-                  <div className="m-2 w-14 h-14 rounded-md flex items-center justify-center">
-                    <img src={albums.cover} alt="" />
-                  </div>
-                  <div className="m-2 ">
-                    <p className="text-lg">{albums.title}</p>
-                    <span className="text-gray-300 text-sm flex gap-1 items-center">
-                      {albums.type}
-                      <i>
-                        <GoDotFill size={9} />
-                      </i>
-                      {songs.artist}
-                    </span>
-                  </div>
-                </div>
-                </Link>
-
-                  )
-                })
-              );
-            })}
+                    <Link key={albums.id} to={`/playlist/${albums.albumID}`}>
+                      <div className="flex mt-2 hover:bg-[#272727] rounded-lg  ">
+                        <div className="m-2 w-14 h-14 rounded-md flex items-center justify-center">
+                          <img src={albums.cover} alt="" />
+                        </div>
+                        <div className="m-2 ">
+                          <p className="text-lg">{albums.title}</p>
+                          <span className="text-gray-300 text-sm flex gap-1 items-center">
+                            {albums.type}
+                            <i>
+                              <GoDotFill size={9} />
+                            </i>
+                            <Link to={`/artist/${songs.artistId}`}>{songs.artist}</Link>
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                });
+              })}
             </div>
-
           </div>
         </div>
 

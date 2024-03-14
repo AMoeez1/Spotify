@@ -2,20 +2,23 @@ import { FaHeart, FaPlay, FaSpotify } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import Layout from "../Components/Layout";
 import PlaylistData from "../Data/PlaylistData";
-
 import { IoIosMore } from "react-icons/io";
 import { MdWatchLater } from "react-icons/md";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 function PlaylistFull() {
   const { playlistId } = useParams();
-  // const item = value.albums.filter((song) => song.albumID === playlistId);
-  const value = PlaylistData.find((prod) => prod.id === playlistId);
-  const items = value.filter((album) => album.albums)
-  
+  const [albums, setAlbums] = useState([])
+
+  const getAlbums = useCallback(() =>{
+    const refAlbums = PlaylistData.flatMap((item2) => {
+      return item2.albums.filter((album) => album.albumID === playlistId);
+    })
+    setAlbums(refAlbums)
+  },[playlistId])
+
   const [changeColor, setChangeColor] = useState(false);
   const [tablePlay, setTablePlay] = useState(false);
-  console.log(items)
 
   const handleLike = () => {
     setChangeColor((current) => !current);
@@ -27,13 +30,18 @@ function PlaylistFull() {
     setTablePlay((current) => !current);
   };
 
-  
+  useEffect(() => {
+    getAlbums();
+  }, [getAlbums]);
 
   return (
     <Layout>
-      {items.map((album, index) => {
+      {albums.map((album, index) => {
         return (
-          <div key={index} className="h-[44rem] overflow-y-hidden hover:overflow-y-scroll ">
+          <div
+            key={index}
+            className="h-[44rem] overflow-y-hidden hover:overflow-y-scroll "
+          >
             <div className="" style={{ margin: 0 }}>
               <div className={`flex w-full py-10 px-6 ${album?.bgColor}`}>
                 <div className="pt-10 flex drop-shadow-lg">
@@ -70,7 +78,7 @@ function PlaylistFull() {
             <div
               style={{ margin: 0 }}
               className="flex items-center p-5 gap-8 bg-gradient-to-b from-cyan-900 via-[#121212]"
-            > 
+            >
               <i className="bg-green-500 cursor-pointer p-5 text-xl rounded-full">
                 <FaPlay />
               </i>
@@ -102,7 +110,7 @@ function PlaylistFull() {
                   </tr>
                 </thead>
                 <tbody>
-                  {items.albums.tracks.map((track) => {
+                  {album?.tracks?.map((track) => {
                     return (
                       <tr
                         key={track.id}
