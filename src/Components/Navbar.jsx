@@ -4,13 +4,10 @@ import {
   IoIosArrowBack,
   IoIosArrowForward,
 } from "react-icons/io";
-import { FaUser } from "react-icons/fa";
-
+import { FaUser } from "react-icons/fa"; 
 function Header() {
   return (
-    <div className="">
-      <header>
-        <nav className="w-screen overflow-x-hidden text-white fixed z-10">
+        <nav className="text-white h-16 overflow-hidden bg-transparent mt-2">
           <div className="flex flex-wrap items-center
            max-w-screen-xl">
             <div className="gap-x-3 flex px-6 ">
@@ -22,7 +19,7 @@ function Header() {
             </Link>
 
             </div>
-            <div className="relative left-[35rem]">
+            <div className="ml-auto mr-8">
               <ul className="flex gap-3 flex-col mt-4 font-medium lg:flex-row">
                 <Link
                   to=""
@@ -52,8 +49,6 @@ function Header() {
             </div>
           </div>
         </nav>
-      </header>
-    </div>
   );
 }
 

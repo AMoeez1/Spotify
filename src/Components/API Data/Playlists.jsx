@@ -19,8 +19,8 @@ export default function Playlists() {
         </Link>
       </div>
       <div className="grid grid-cols-12 @container">
-        {Data.map((item) => {
-          // if (index <= 5) {
+        {Data.map((item, index) => {
+          if (index <= 3) {
             return (
               item.albums.map((albums, index) =>{
                 return(
@@ -48,8 +48,8 @@ export default function Playlists() {
                 )
               })
             );
-          // }
-          // return null;s
+          }
+          return null;
         })}
       </div>
     </div>
